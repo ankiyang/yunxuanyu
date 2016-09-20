@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^video/', include('video.urls')),
+    url(r'^$', "category.views.category_list", name="category_list"),
 ]
