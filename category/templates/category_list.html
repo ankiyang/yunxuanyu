@@ -65,7 +65,7 @@
           {% for c in categories %}
             <div class="panel panel-info">
               <div class="panel-heading">
-                <a href="{% url 'category_list' c.id %}">{{ c.name }}</a>
+                <a href="{% url 'video_list' c.id %}">{{ c.name }}</a>
                 <span class="pull-right">管理员：{{ c.manager.username }}</span>
               </div>
               <div class="panel-body">
