@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     url(r'^detail/(?P<video_id>\d+)/$', "video.views.video_detail", name='video_detail'),
-    url(r'^list/(?P<category_id>\d+)', "video.views.video_list", name='video_list'),
+    url(r'^list/$', "video.views.video_list", name='video_list'),
+    url(r'^category/$', 'video.views.category_list', name='test'),
 ]

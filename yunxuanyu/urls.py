@@ -18,6 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^video/', include('video.urls')),
-    url(r'^$', "video.views.category_list", name="category_list"),
+    url(r'^v/', include('video.urls')),
+    url(r'^$', "video.views.index", name="index"),
 ]
