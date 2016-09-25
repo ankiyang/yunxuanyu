@@ -2,6 +2,7 @@
 
 angular.module('yunxuanyu', [
     'ngRoute',
+    'yunxuanyuCtrl',
     ])
 
     .config(["$interpolateProvider", "$routeProvider", function($interpolateProvider, $routeProvider) {
@@ -9,10 +10,19 @@ angular.module('yunxuanyu', [
 
         $routeProvider
             .when('/', {
-                templateUrl: "/v/list",
+                templateUrl: "/v/all",
+                controller: 'indexCtrl',
             })
 
             .when('/:video_id', {
-                templateUrl: "/v/detail/"
+                templateUrl: "/v/detail/",
+                controller: 'detailCtrl',
             })
+
+            .when('/c/:category', {
+                templateUrl: '/v/category/',
+                controller: 'categoryListCtrl',
+            })
+
+            .otherwise('/')
     }])

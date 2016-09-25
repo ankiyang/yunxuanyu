@@ -29,6 +29,7 @@ class Video(models.Model):
     url = models.CharField(max_length=10000)
     av_id = models.CharField(max_length=100)
     create_timestamp = models.DateTimeField(auto_now_add=True)
+    click_num = models.IntegerField()
     last_update_timestamp = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):

@@ -1,0 +1,22 @@
+[
+    {
+        "category_name": "少女妆",
+        "video_num": 200
+    },
+    {
+        "category_name": "新娘妆",
+        "video_num": 150
+    },
+    {
+        "category_name": "孕妇妆",
+        "video_num": 100
+    },
+    {
+        "category_name": "大眼妆",
+        "video_num": 50
+    },
+    {
+        "category_name": "职场妆",
+        "video_num": 25
+    }
+]
