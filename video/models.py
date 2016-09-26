@@ -51,6 +51,9 @@ class VideoCategory(models.Model):
     video_id = models.ForeignKey(Video)
     category_id = models.ForeignKey(Category)
 
+    def __unicode__(self):
+        return self.video_id
+
     class Meta:
         verbose_name = u"视频类别表"
         verbose_name_plural = u"视频类别表"

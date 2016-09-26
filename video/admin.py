@@ -13,6 +13,8 @@ class VideoAdmin(admin.ModelAdmin):
         "create_timestamp",
         "last_update_timestamp",
     )
+
+    search_fields = ["title", "content", "author"]
     list_filter = ("author",)
 
 
