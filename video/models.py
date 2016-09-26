@@ -7,6 +7,13 @@ class Author(models.Model):
     name = models.CharField(u"作者名", max_length=100)
     author_url = models.CharField(u"作者主页", max_length=100)
 
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = u"视频作者"
+        verbose_name_plural = u"视频作者"
+
 
 class Category(models.Model):
     name = models.CharField(u"名字", max_length=30)
@@ -18,8 +25,8 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = u"分类"
-        verbose_name_plural = u"分类"
+        verbose_name = u"分类表"
+        verbose_name_plural = u"分类表"
 
 
 class Video(models.Model):
@@ -28,8 +35,8 @@ class Video(models.Model):
     content = models.CharField(u"视频简介", max_length=100000)
     url = models.CharField(max_length=10000)
     av_id = models.CharField(max_length=100)
+    click_num = models.IntegerField(u"点击数", default=0)
     create_timestamp = models.DateTimeField(auto_now_add=True)
-    click_num = models.IntegerField()
     last_update_timestamp = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
@@ -43,4 +50,8 @@ class Video(models.Model):
 class VideoCategory(models.Model):
     video_id = models.ForeignKey(Video)
     category_id = models.ForeignKey(Category)
+
+    class Meta:
+        verbose_name = u"视频类别表"
+        verbose_name_plural = u"视频类别表"
 

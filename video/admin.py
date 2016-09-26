@@ -9,6 +9,7 @@ class VideoAdmin(admin.ModelAdmin):
         "content",
         "url",
         "av_id",
+        "click_num",
         "create_timestamp",
         "last_update_timestamp",
     )
